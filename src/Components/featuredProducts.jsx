@@ -53,6 +53,47 @@ const products = [
     price: "$35",
     color: "Black",
   },
+  {
+    id: 4,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "/products-123.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 4,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "/products-123.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 4,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "/products-123.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 4,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "/products-123.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+
   // More products...
 ];
 
@@ -61,16 +102,11 @@ export default function Example() {
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8">
         <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 pb-10">
-          Hot Deals
+          Featured Products
         </h2>
 
-        <div className="mt-6 grid md:grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-          <div className="md:invisible lg:visible visible ">
-            <h1 className="pt-10  text-3xl text-gray-800">Summer Sale</h1>
-            <h1 className="  text-3xl font-bold text-gray-900">
-              Up to 60% Off
-            </h1>
-          </div>
+        <div className="mt-6 grid md:grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          
           {products.map((product) => (
             <div key={product.id} className="group relative">
               <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
