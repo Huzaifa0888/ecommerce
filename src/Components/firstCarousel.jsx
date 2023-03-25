@@ -41,7 +41,13 @@ const SmallSlider = ({ items }) => {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 4,
         },
       },
     ],
@@ -49,21 +55,31 @@ const SmallSlider = ({ items }) => {
 
   return (
     <>
-      <h2 className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8 text-5xl  text-center font-bold tracking-tight text-gray-900 ">
-        You Might Like
-      </h2>
-      <div className="slider max-w-full mx-auto rounded-full  ">
-        <Slider {...settings} ref={sliderRef}>
-          {items.map((item) => (
-            <div
-              key={item.id}
-              className=" inline-flex w-72 h-64 rounded-full text-black items-center justify-center text-2xl  mx-4"
-            >
-              <img src={item.img} alt="" className=" lg:pr-2 md:pr-2 pr-0 " />
-              <h1 className="text-left ">{item.para}</h1>
+      <div className="bg-gray-100 w-full h-[400px] md:h-full border-white  pt-20">
+        <div className="lg:w-[92%] md:w-4/5 mx-auto">
+          <h2 className="mx-auto max-w-2xl py-5 px-4 bg-white sm:py-24 sm:px-6 lg:max-w-full rounded-2xl lg:px-8 text-5xl  text-center font-bold tracking-tight text-gray-900 ">
+            You Might Like
+          </h2>
+          <div className="">
+            <div className="slider max-w-full mx-auto rounded-full  border-none ">
+              <Slider {...settings} ref={sliderRef}>
+                {items.map((item) => (
+                  <div
+                    key={item.id}
+                    className=" inline-flex w-72 h-full bg-white border-none justify-center text-2xl  "
+                  >
+                    <img
+                      src={item.img}
+                      alt=""
+                      className=" lg:pr-2 md:pr-2 pr-0 border-none"
+                    />
+                    <h1 className="text-left border-none">{item.para}</h1>
+                  </div>
+                ))}
+              </Slider>
             </div>
-          ))}
-        </Slider>
+          </div>
+        </div>
       </div>
     </>
   );

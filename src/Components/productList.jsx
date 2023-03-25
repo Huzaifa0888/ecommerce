@@ -59,7 +59,7 @@ const products = [
 export default function Example() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8">
+      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8 mt-20">
         <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 pb-10">
           Hot Deals
         </h2>
@@ -82,15 +82,17 @@ export default function Example() {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700">
+                  <h3 className="text-sm text-gray-700 font-extrabold">
                     <a href={product.href}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p className="mt-1 text-sm text-gray-500 font-extrabold">
+                    {product.color}
+                  </p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-sm  font-extrabold text-gray-900">
                   {product.price}
                 </p>
               </div>
