@@ -57,7 +57,7 @@ const SmallSlider = ({ items }) => {
 
   return (
     <>
-      <div className="bg-gray-100 lg:w-[92%] h-full md:h-full pt-20  max-w-7xl mx-auto">
+      <div className="bg-white lg:w-[92%] h-full md:h-full mt-20  max-w-7xl mx-auto rounded-tl-2xl rounded-tr-2xl">
         <div className="lg:w-[1250px] md:w-10/12 mx-auto bg-white rounded-tl-2xl rounded-tr-2xl py-16 lg:px-8">
           <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 mx-auto max-w-2xl py-5 px-4 sm:py-24 sm:px-6 ">
             You Might Like
