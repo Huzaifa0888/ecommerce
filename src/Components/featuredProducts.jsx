@@ -100,7 +100,7 @@ const products = [
 export default function Example() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8">
+      <div className=" max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8 lg:w-[92%] md:w-11/12 mx-auto bg-white">
         <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 pb-10">
           Featured Products
         </h2>

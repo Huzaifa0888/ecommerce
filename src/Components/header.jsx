@@ -40,7 +40,7 @@ export default function Example() {
                     alt="Your Company"
                   />
                 </div>
-                <div className="sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a

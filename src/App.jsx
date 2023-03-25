@@ -8,6 +8,8 @@ import FeaturedProducts from "./Components/featuredProducts";
 import FirstCarausel from "./Components/firstCarousel";
 import Signup from "./Components/signup";
 import Footer from "./Components/footer";
+import Car from "./Components/c";
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
       <Carausel></Carausel>
       <Signup></Signup>
       <Footer></Footer>
+      {/* <Car></Car> */}
 
 
     </>
