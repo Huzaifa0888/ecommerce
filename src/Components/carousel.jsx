@@ -50,12 +50,12 @@ const SmallSlider = ({ items }) => {
   };
 
   return (
-    <div className="slider max-w-full mx-auto mb-16 pt-16">
+    <div className="slider max-w-7xl mx-auto pb-16  bg-white lg:w-[92%]">
       <Slider {...settings} ref={sliderRef}>
         {items.map((item) => (
           <div
             key={item.id}
-            className="slider__item inline-flex w-72 h-64  text-white items-center justify-center text-3xl rounded-md mx-4"
+            className="slider__item inline-flex w-72 h-64 py-16  text-white items-center lg:w-[1250px] justify-center text-3xl rounded-md mx-4"
           >
             <img src={item.img} alt="" className=" lg:pr-2 md:pr-2 pr-0 " />
           </div>

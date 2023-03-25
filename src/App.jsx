@@ -15,18 +15,18 @@ import Car from "./Components/c";
 function App() {
   return (
     <>
-      <Header></Header>
-      <Herosection></Herosection>
-      <FirstCarausel></FirstCarausel>
-      <ProductList></ProductList>
-      <Product></Product>
-      <FeaturedProducts></FeaturedProducts>
-      <Carausel></Carausel>
-      <Signup></Signup>
-      <Footer></Footer>
-      {/* <Car></Car> */}
-
-
+      <section className="bg-gray-100">
+        <Header></Header>
+        <Herosection></Herosection>
+        <FirstCarausel></FirstCarausel>
+        <ProductList></ProductList>
+        <Product></Product>
+        <FeaturedProducts></FeaturedProducts>
+        {/* <Car></Car> */}
+        <Carausel></Carausel>
+        <Signup></Signup>
+        <Footer></Footer>
+      </section>
     </>
   );
 }

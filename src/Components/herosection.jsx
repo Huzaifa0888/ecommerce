@@ -3,8 +3,8 @@ import React from "react";
 function herosection() {
   return (
     <>
-      <section class="pt-10 overflow-hidden bg-gray-100 md:pt-0 sm:pt-16 2xl:pt-16">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-full">
+      <section class="pt-10 overflow-hidden bg-gray-100 md:pt-0 sm:pt-16 2xl:pt-16 max-w-7xl mx-auto lg:w-[92%]">
+        <div class="px-4 mx-auto sm:px-6 lg:px-0 max-w-full">
           <div class="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
               <div className="pb-5">

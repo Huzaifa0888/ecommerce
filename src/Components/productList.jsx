@@ -58,13 +58,13 @@ const products = [
 
 export default function Example() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8 mt-20 lg:w-[92%] md:w-11/12  bg-white">
+    <div className="bg-white max-w-7xl lg:w-[92%] mx-auto">
+      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-4  lg:w-[96.5%] md:w-11/12  bg-white">
         <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 pb-10">
           Hot Deals
         </h2>
 
-        <div className="mt-6 grid md:grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+        <div className=" grid md:grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
           <div className="md:invisible lg:visible visible ">
             <h1 className="pt-10  text-3xl text-gray-800">Summer Sale</h1>
             <h1 className="  text-3xl font-bold text-gray-900">

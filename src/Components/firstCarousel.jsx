@@ -57,19 +57,19 @@ const SmallSlider = ({ items }) => {
 
   return (
     <>
-      <div className="bg-gray-100 w-full h-[400px] md:h-full pt-20">
-        <div className="lg:w-[92%] md:w-10/12 mx-auto bg-white rounded-2xl lg:px-8">
-          <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 mx-auto max-w-2xl py-5 px-4 sm:py-24 sm:px-6 lg:max-w-full">
+      <div className="bg-gray-100 lg:w-[92%] h-full md:h-full pt-20  max-w-7xl mx-auto">
+        <div className="lg:w-[1250px] md:w-10/12 mx-auto bg-white rounded-tl-2xl rounded-tr-2xl py-16 lg:px-8">
+          <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 mx-auto max-w-2xl py-5 px-4 sm:py-24 sm:px-6 ">
             You Might Like
           </h2>
           <Slider {...settings} ref={sliderRef}>
             {items.map((item) => (
               <div
                 key={item.id}
-                className="inline-flex w-full h-full bg-white justify-center text-2xl mx-auto"
+                className="inline-flex w-full h-full bg-white justify-center text-2xl mx-auto lg:w-[92%]"
               >
                 <img src={item.img} alt="" />
-                <h1 className="text-left">{item.para}</h1>
+                <h1 className="text-left bg-white">{item.para}</h1>
               </div>
             ))}
           </Slider>
