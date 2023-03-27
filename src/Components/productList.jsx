@@ -51,7 +51,7 @@ export default function Example() {
         </h2>
 
         <div className=" grid md:grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-          <div className=" lg:visible hidden ">
+          <div className=" hidden md:hidden lg:block ">
             <h1 className="pt-10  text-3xl text-gray-800">Summer Sale</h1>
             <h1 className="  text-3xl font-bold text-gray-900 pb-10">
               Up to 60% Off

@@ -3,7 +3,7 @@ import React from 'react'
 function signup() {
   return (
     <div className="lg:w-[92%] mx-auto max-w-7xl bg-white md:w-11/12">
-      <div className="mx-auto lg:w-[1250px] py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8  bg-white">
+      <div className="mx-auto lg:w-[1250px] py-16 md:py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-8  bg-white">
         <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 pb-10">
           Sign up now & get 10% off
         </h2>
