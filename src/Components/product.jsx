@@ -36,6 +36,7 @@ export default function Example() {
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
+
               <div className=" flex justify-center">
                 <div className="bg-white w-10/12 h-full relative bottom-[95px] rounded-lg">
                   <h3 className="text-3xl text-center font-black text-gray-700 pt-4">
@@ -49,6 +50,16 @@ export default function Example() {
                   </h3>
                   <p className="mt-1 text-lg text-center pb-4 font-extrabold text-gray-500">
                     {product.color}
+                  </p>
+                </div>
+              </div>
+              <div className=" flex justify-center ">
+                <div className="bg-red-700 w-[100px] h-[100px] relative  bottom-[630px] left-[208px] rounded-full ">
+                  <h3 className="text-sm text-center  font-black text-white pt-7 ">
+                    STARTING
+                  </h3>
+                  <p className="mt-1 text-sm text-center pb-4 font-extrabold text-white">
+                    AT 19$
                   </p>
                 </div>
               </div>
