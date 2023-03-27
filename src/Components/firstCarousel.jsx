@@ -69,7 +69,7 @@ const SmallSlider = ({ items }) => {
                 className="inline-flex w-full h-full bg-white justify-center text-2xl mx-auto lg:w-[92%]"
               >
                 <img src={item.img} alt="" />
-                <h1 className="text-left bg-white">{item.para}</h1>
+                <h1 className="text-left bg-white font-bold">{item.para}</h1>
               </div>
             ))}
           </Slider>

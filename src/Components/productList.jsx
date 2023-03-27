@@ -1,24 +1,12 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+
+import Count from "./count";
+
 const products = [
   {
     id: 1,
     name: "Basic Tee",
     href: "#",
-    imageSrc:
-      "/products-123.jpg",
+    imageSrc: "/products-123.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
@@ -27,8 +15,7 @@ const products = [
     id: 2,
     name: "Basic Tee",
     href: "#",
-    imageSrc:
-      "/products-123.jpg",
+    imageSrc: "/products-123.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
@@ -37,8 +24,7 @@ const products = [
     id: 3,
     name: "Basic Tee",
     href: "#",
-    imageSrc:
-      "/products-123.jpg",
+    imageSrc: "/products-123.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
@@ -47,8 +33,7 @@ const products = [
     id: 4,
     name: "Basic Tee",
     href: "#",
-    imageSrc:
-      "/products-123.jpg",
+    imageSrc: "/products-123.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
@@ -57,6 +42,7 @@ const products = [
 ];
 
 export default function Example() {
+
   return (
     <div className="bg-white max-w-7xl lg:w-[92%] mx-auto">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-full lg:px-4  lg:w-[96.5%] md:w-11/12  bg-white">
@@ -67,10 +53,50 @@ export default function Example() {
         <div className=" grid md:grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
           <div className="md:invisible lg:visible visible ">
             <h1 className="pt-10  text-3xl text-gray-800">Summer Sale</h1>
-            <h1 className="  text-3xl font-bold text-gray-900">
+            <h1 className="  text-3xl font-bold text-gray-900 pb-10">
               Up to 60% Off
             </h1>
+            <div className="flex pb-1">
+              <p className="font-extrabold">
+                8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+              </p>
+              <p className="font-extrabold">
+                &nbsp;&nbsp;8
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+              </p>
+              <p className="font-extrabold">&nbsp;&nbsp;8</p>
+            </div>
+            <div className="flex justify-between">
+              <p className="font-medium">DAYS</p>
+              <p className="font-medium pl-3">HOURS</p>
+              <p className="font-medium pr-5">MINS</p>
+            </div>
+            <div>
+              <p className="font-extrabold pt-2">8</p>
+              <p className="font-medium pr-5">SEC</p>
+            </div>
+            {/* <div className="flex justify-center">
+              <div className="bg-gray-100 rounded-md p-4 grid grid-cols-4 gap-4">
+                <div className="bg-white rounded-md p-4 text-center">
+                  <span id="days" className="font-bold text-2xl"></span>
+                  <div className="text-sm uppercase">Days</div>
+                </div>
+                <div className="bg-white rounded-md p-4 text-center">
+                  <span id="hours" className="font-bold text-2xl"></span>
+                  <div className="text-sm uppercase">Hours</div>
+                </div>
+                <div className="bg-white rounded-md p-4 text-center">
+                  <span id="minutes" className="font-bold text-2xl"></span>
+                  <div className="text-sm uppercase">Minutes</div>
+                </div>
+                <div className="bg-white rounded-md p-4 text-center">
+                  <span id="seconds" className="font-bold text-2xl"></span>
+                  <div className="text-sm uppercase">Seconds</div>
+                </div>
+              </div>
+            </div> */}
           </div>
+
           {products.map((product) => (
             <div key={product.id} className="group relative">
               <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
@@ -82,17 +108,17 @@ export default function Example() {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700 font-extrabold">
+                  <h3 className="text-lg text-gray-700 font-extrabold">
                     <a href={product.href}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500 font-extrabold">
+                  <p className="mt-1 text-lg text-gray-500 font-extrabold">
                     {product.color}
                   </p>
                 </div>
-                <p className="text-sm  font-extrabold text-gray-900">
+                <p className="text-lg  font-extrabold text-gray-900">
                   {product.price}
                 </p>
               </div>

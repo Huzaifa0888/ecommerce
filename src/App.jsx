@@ -8,7 +8,7 @@ import FeaturedProducts from "./Components/featuredProducts";
 import FirstCarausel from "./Components/firstCarousel";
 import Signup from "./Components/signup";
 import Footer from "./Components/footer";
-import Car from "./Components/c";
+import Car from "./Components/count";
 
 
 
@@ -22,11 +22,11 @@ function App() {
         <ProductList></ProductList>
         <Product></Product>
         <FeaturedProducts></FeaturedProducts>
-        {/* <Car></Car> */}
         <Carausel></Carausel>
         <Signup></Signup>
         <Footer></Footer>
       </section>
+        {/* <Car></Car> */}
     </>
   );
 }

@@ -37,8 +37,8 @@ export default function Example() {
                 />
               </div>
               <div className=" flex justify-center">
-                <div className="bg-gray-100 w-full h-full">
-                  <h3 className="text-sm text-center font-extrabold text-gray-700 pt-4">
+                <div className="bg-white w-10/12 h-full relative bottom-[95px] rounded-lg">
+                  <h3 className="text-3xl text-center font-black text-gray-700 pt-4">
                     <a href={product.href}>
                       <span
                         aria-hidden="true"
@@ -47,7 +47,7 @@ export default function Example() {
                       {product.name}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-center pb-4 font-extrabold text-gray-500">
+                  <p className="mt-1 text-lg text-center pb-4 font-extrabold text-gray-500">
                     {product.color}
                   </p>
                 </div>
