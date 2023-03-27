@@ -15,7 +15,7 @@ import Car from "./Components/count";
 function App() {
   return (
     <>
-      <section className="bg-gray-100">
+      <section className="bg-gray-100 ">
         <Header></Header>
         <Herosection></Herosection>
         <FirstCarausel></FirstCarausel>

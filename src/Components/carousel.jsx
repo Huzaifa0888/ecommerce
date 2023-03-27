@@ -50,7 +50,7 @@ const SmallSlider = ({ items }) => {
   };
 
   return (
-    <div className="slider max-w-7xl mx-auto pb-16  bg-white lg:w-[92%]">
+    <div className="slider max-w-7xl mx-auto  pb-16 md:w-11/12 bg-white lg:w-[92%]">
       <Slider {...settings} ref={sliderRef}>
         {items.map((item) => (
           <div

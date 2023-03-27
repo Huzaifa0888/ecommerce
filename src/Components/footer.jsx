@@ -9,7 +9,7 @@ function footer() {
         href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
       />
 
-      <footer className="relative bg-blueGray-200 pt-8 pb-6  lg:w-[92%]   mx-auto bg-white max-w-7xl ">
+      <footer className="relative bg-blueGray-200 pt-8 pb-6  lg:w-[92%] md:w-11/12  mx-auto bg-white max-w-7xl ">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4 ">
@@ -170,23 +170,13 @@ function footer() {
             </div>
           </div>
           <hr className="my-6 border-blueGray-300" />
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 lg:px-4 mx-auto text-center">
+          <div className="flex flex-wrap items-center md:justify-between  justify-center lg:justify-between">
+            <div className="w-full   lg:px-4  flex flex-wrap items-center md:justify-between justify-center lg:justify-between  ">
               <div className="text-sm text-blueGray-500 font-semibold py-1">
-                Copyright © <span id="get-current-year">2021</span>
-                <a
-                  href="https://www.creative-tim.com/product/notus-js"
-                  className="text-blueGray-500 hover:text-gray-800"
-                  target="_blank"
-                />{" "}
-                Notus JS by
-                <a
-                  href="https://www.creative-tim.com?ref=njs-profile"
-                  className="text-blueGray-500 hover:text-blueGray-800"
-                >
-                  Creative Tim
-                </a>
-                .
+                <p>©2022 Uomo</p>
+              </div>
+              <div className="text-sm text-blueGray-500 font-semibold py-1">
+                <img src="/payment.png" alt="" />
               </div>
             </div>
           </div>
