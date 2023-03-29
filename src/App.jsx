@@ -18,6 +18,8 @@ function App() {
   return (
     <>
       <section className="bg-gray-100 ">
+
+    {/* <C></C> */}
         <Header></Header>
         <Herosection></Herosection>
         <FirstCarausel></FirstCarausel>
@@ -28,7 +30,6 @@ function App() {
         <Signup></Signup>
         <Footer></Footer>
       </section>
-    {/* <C></C> */}
         {/* <Car></Car> */}
     </>
 
