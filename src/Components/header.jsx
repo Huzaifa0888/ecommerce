@@ -1,9 +1,17 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure, Menu} from "@headlessui/react";
+import { Bars3Icon, BellIcon, } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "DEMO", href: "#", current: false },
+  {
+    name: "DEMO",
+    href: "#",
+    current: false,
+    dropdown: true,
+    options: ["Online", "Offline"],
+  },
   { name: "SHOP", href: "#", current: false },
   { name: "PRODUCTS", href: "#", current: false },
   { name: "BLOG", href: "#", current: false },
@@ -15,6 +23,11 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const [openn, setOpenn] = useState(false);
+
+  const handleOpenDialog = () => {
+    setOpenn(true);
+  };
   return (
     <Disclosure as="nav" className="bg-white  mx-auto">
       {({ open }) => (
@@ -137,81 +150,105 @@ export default function Example() {
                     />
                   </svg>
                 </button>
-
-                {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="p-1 text-gray-400  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="sr-only">Open user menu</span>
-                      <svg
-                        className="h-7 w-7"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        // class="w-6 h-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
-                        />
-                      </svg>
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
+                <button
+                  onClick={handleOpenDialog}
+                  type="button"
+                  className=" p-1 text-gray-400 pl-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <svg
+                    className="h-7 w-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    // class="w-6 h-6"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100 " : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+                    />
+                  </svg>
+                </button>
+                <Transition.Root show={openn} as={Fragment}>
+                  <Dialog as="div" className="relative z-10" onClose={setOpenn}>
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-in-out duration-500"
+                      enterFrom="opacity-0"
+                      enterTo="opacity-100"
+                      leave="ease-in-out duration-500"
+                      leaveFrom="opacity-100"
+                      leaveTo="opacity-0"
+                    >
+                      <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    </Transition.Child>
+
+                    <div className="fixed inset-0 overflow-hidden">
+                      <div className="absolute inset-0 overflow-hidden">
+                        <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                          <Transition.Child
+                            as={Fragment}
+                            enter="transform transition ease-in-out duration-500 sm:duration-700"
+                            enterFrom="translate-x-full"
+                            enterTo="translate-x-0"
+                            leave="transform transition ease-in-out duration-500 sm:duration-700"
+                            leaveFrom="translate-x-0"
+                            leaveTo="translate-x-full"
                           >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
+                            <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
+                              <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                                <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+                                  <div className="">
+                                    <p className="font-extrabold">Languages</p>
+                                  </div>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 01
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 02
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 03
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 04
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 05
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 06
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 07
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    Fashion 08
+                                  </p>
+                                  <div className="mt-8">
+                                    <p className="font-extrabold">Currency</p>
+                                  </div>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    GBP
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    GBP{" "}
+                                  </p>
+                                  <p className="mt-3 text-sm text-gray-900 font-semibold">
+                                    SGD{" "}
+                                  </p>
+                                </div>
+                              </div>
+                            </Dialog.Panel>
+                          </Transition.Child>
+                        </div>
+                      </div>
+                    </div>
+                  </Dialog>
+                </Transition.Root>
+                {/* Profile dropdown */}
               </div>
             </div>
           </div>

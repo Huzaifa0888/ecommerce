@@ -9,6 +9,8 @@ import FirstCarausel from "./Components/firstCarousel";
 import Signup from "./Components/signup";
 import Footer from "./Components/footer";
 import Car from "./Components/count";
+import C from "./Components/c";
+
 
 
 
@@ -26,8 +28,10 @@ function App() {
         <Signup></Signup>
         <Footer></Footer>
       </section>
+    {/* <C></C> */}
         {/* <Car></Car> */}
     </>
+
   );
 }
 
