@@ -24,9 +24,9 @@ function herosection() {
               </h1>
             </div>
 
-            <div class="relative">
+            <div class="">
               <img
-                class="relative w-full xl:max-w-lg xl:mx-auto pl-48 2xl:origin-bottom 2xl:scale-110"
+                class=" w-full xl:max-w-lg xl:mx-auto pl-48 2xl:origin-bottom 2xl:scale-110"
                 src="/slider11.png"
                 alt=""
               />
