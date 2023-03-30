@@ -4,6 +4,7 @@ import {
   ShoppingBagIcon,
   
 } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -13,26 +14,34 @@ const navigation = {
   categories: [
     {
       id: "women",
-      name: "DEMO",
+      name: "SHOP",
       featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
-        },
         {
           name: "Basic Tees",
           href: "#",
           imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
+            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
+
           imageAlt:
             "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
         },
       ],
       sections: [
+        {
+          id: "clothing",
+          name: "Clothing",
+          items: [
+            { name: "Tops", href: "#" },
+            { name: "Dresses", href: "#" },
+            { name: "Pants", href: "#" },
+            { name: "Denim", href: "#" },
+            { name: "Sweaters", href: "#" },
+            { name: "T-Shirts", href: "#" },
+            { name: "Jackets", href: "#" },
+            { name: "Activewear", href: "#" },
+            { name: "Browse All", href: "#" },
+          ],
+        },
         {
           id: "clothing",
           name: "Clothing",
@@ -75,7 +84,7 @@ const navigation = {
     },
     {
       id: "men",
-      name: "SHOP",
+      name: "PRODUCT",
       featured: [
         {
           name: "New Arrivals",
@@ -85,16 +94,21 @@ const navigation = {
           imageAlt:
             "Drawstring top with elastic loop closure and textured interior padding.",
         },
-        {
-          name: "Artwork Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
-          imageAlt:
-            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
-        },
       ],
       sections: [
+        {
+          id: "clothing",
+          name: "Clothing",
+          items: [
+            { name: "Tops", href: "#" },
+            { name: "Pants", href: "#" },
+            { name: "Sweaters", href: "#" },
+            { name: "T-Shirts", href: "#" },
+            { name: "Jackets", href: "#" },
+            { name: "Activewear", href: "#" },
+            { name: "Browse All", href: "#" },
+          ],
+        },
         {
           id: "clothing",
           name: "Clothing",
@@ -139,19 +153,19 @@ const navigation = {
   ],
 };
 
-// const navigation = [
-//   {
-//     name: "DEMO",
-//     href: "#",
-//     current: false,
-//     dropdown: true,
-//     options: ["Online", "Offline"],
-//   },
-//   { name: "SHOP", href: "#", current: false },
-//   { name: "PRODUCTS", href: "#", current: false },
-//   { name: "BLOG", href: "#", current: false },
-//   { name: "PAGE", href: "#", current: false },
-// ];
+const navigation1 = [
+  {
+    name: "DEMO",
+    href: "#",
+    current: false,
+    dropdown: true,
+    options: ["Online", "Offline"],
+  },
+  { name: "SHOP", href: "#", current: false },
+  { name: "PRODUCTS", href: "#", current: false },
+  { name: "BLOG", href: "#", current: false },
+  { name: "PAGE", href: "#", current: false },
+];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -192,21 +206,16 @@ export default function Example() {
                   </div>
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
-                      {/* {navigation.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-black",
-                            "rounded-md px-3 py-2 text-base font-extrabold"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      ))} */}
+                      <a
+                        href="/"
+                        className={classNames(
+                          false ? "bg-gray-900 text-white" : "text-black",
+                          "rounded-md px-3 py-2 text-base font-extrabold"
+                        )}
+                        aria-current="page"
+                      >
+                        DEMO
+                      </a>
                       {navigation.categories.map((category) => (
                         <Popover key={category.name} className="flex">
                           {({ open }) => (
@@ -214,9 +223,7 @@ export default function Example() {
                               <div className="relative flex">
                                 <Popover.Button
                                   className={classNames(
-                                    open
-                                      ? "bg-gray-900 text-white"
-                                      : "text-black",
+                                    open ? "text-black" : "text-black",
                                     "rounded-md px-3 py-2 text-base font-extrabold"
                                   )}
                                 >
@@ -239,63 +246,65 @@ export default function Example() {
                                     aria-hidden="true"
                                   />
 
-                                  <div className="relative bg-white">
+                                  <div className="relative   bg-white">
                                     <div className="mx-auto max-w-7xl px-8">
-                                      <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                                        <div className="col-start-2 grid grid-cols-2 gap-x-8">
-                                          {category.featured.map((item) => (
-                                            <div
-                                              key={item.name}
-                                              className="group relative text-base sm:text-sm"
-                                            >
-                                              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                                <img
-                                                  src={item.imageSrc}
-                                                  alt={item.imageAlt}
-                                                  className="object-cover object-center"
-                                                />
-                                              </div>
-                                              <a
-                                                href={item.href}
-                                                className="mt-6 block font-medium text-gray-900"
+                                      <div className="grid grid-cols-2  gap-x-8 gap-y-10 py-16">
+                                        {
+                                          <div className="col-start-2  grid grid-cols-1 ">
+                                            {category.featured.map((item) => (
+                                              <div
+                                                key={item.name}
+                                                className="group relative text-base  sm:text-sm"
                                               >
-                                                <span
-                                                  className="absolute inset-0 z-10"
+                                                <div className="  overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                                                  <img
+                                                    src={item.imageSrc}
+                                                    alt={item.imageAlt}
+                                                    className="object-fill  object-top"
+                                                  />
+                                                </div>
+                                                <a
+                                                  href={item.href}
+                                                  className="mt-6 block font-medium text-gray-900"
+                                                >
+                                                  <span
+                                                    className="absolute inset-0 z-10"
+                                                    aria-hidden="true"
+                                                  />
+                                                  {item.name}
+                                                </a>
+                                                <p
                                                   aria-hidden="true"
-                                                />
-                                                {item.name}
-                                              </a>
-                                              <p
-                                                aria-hidden="true"
-                                                className="mt-1"
-                                              >
-                                                Shop now
-                                              </p>
-                                            </div>
-                                          ))}
-                                        </div>
-                                        <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                                                  className="mt-1"
+                                                >
+                                                  Shop now
+                                                </p>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        }
+                                        <div className="row-start-1 grid grid-cols-4 gap-x-8 gap-y-10 text-sm">
                                           {category.sections.map((section) => (
                                             <div key={section.name}>
                                               <p
                                                 id={`${section.name}-heading`}
-                                                className="font-medium text-gray-900"
+                                                className="font-extrabold text-gray-900"
                                               >
                                                 {section.name}
                                               </p>
                                               <ul
                                                 role="list"
                                                 aria-labelledby={`${section.name}-heading`}
-                                                className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                                className="mt-6  space-y-6 sm:mt-4 sm:space-y-4"
                                               >
                                                 {section.items.map((item) => (
                                                   <li
                                                     key={item.name}
-                                                    className="flex"
+                                                    className="flex "
                                                   >
                                                     <a
                                                       href={item.href}
-                                                      className="hover:text-gray-800"
+                                                      className="font-semibold  hover:text-gray-800"
                                                     >
                                                       {item.name}
                                                     </a>
@@ -314,6 +323,256 @@ export default function Example() {
                           )}
                         </Popover>
                       ))}
+                      <Menu
+                        as="div"
+                        className="relative inline-block text-left"
+                      >
+                        <div>
+                          <Menu.Button
+                            className={classNames(
+                              false ? "bg-gray-900 text-white" : "text-black",
+                              "rounded-md px-3 py-2 text-base font-extrabold"
+                            )}
+                          >
+                            BLOG
+                          </Menu.Button>
+                        </div>
+
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
+                        >
+                          <Menu.Items className="absolute right-0 left-0  z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-900",
+                                      "block px-4 py-2 font-bold   text-sm"
+                                    )}
+                                  >
+                                    Edit
+                                  </a>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Duplicate
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Archive
+                                  </a>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Move
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Share
+                                  </a>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Add to favorites
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Delete
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Menu.Items>
+                        </Transition>
+                      </Menu>
+                      <Menu
+                        as="div"
+                        className="relative inline-block text-left"
+                      >
+                        <div>
+                          <Menu.Button
+                            className={classNames(
+                              false ? "bg-gray-900 text-white" : "text-black",
+                              "rounded-md px-3 py-2 text-base font-extrabold"
+                            )}
+                          >
+                            PAGE
+                          </Menu.Button>
+                        </div>
+
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
+                        >
+                          <Menu.Items className="absolute right-0 left-0  z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Edit
+                                  </a>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Duplicate
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Archive
+                                  </a>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Move
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <a
+                                    href="#"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 font-bold text-sm"
+                                    )}
+                                  >
+                                    Share
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Menu.Items>
+                        </Transition>
+                      </Menu>
                     </div>
                   </div>
                 </div>
@@ -660,7 +919,7 @@ export default function Example() {
             </header> */}
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pt-2 pb-3">
-                {/* {navigation.map((item) => (
+                {navigation1.map((item) => (
                   <Disclosure.Button
                     key={item.name}
                     as="a"
@@ -675,7 +934,7 @@ export default function Example() {
                   >
                     {item.name}
                   </Disclosure.Button>
-                ))} */}
+                ))}
               </div>
             </Disclosure.Panel>
           </>
