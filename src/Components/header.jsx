@@ -408,7 +408,7 @@ export default function Example() {
                                     />
 
                                     <div className="relative max-w-[800px]  bg-white">
-                                      <div className="mx-auto max-w-7xl px-8">
+                                      <div className="mx-auto max-w-7xl px-8 mt-1">
                                         <div className="grid grid-cols-1 gap-x-8 gap-y-10 py-16">
                                           <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                             {category.sections.map(
@@ -486,7 +486,7 @@ export default function Example() {
                                     aria-hidden="true"
                                   />
 
-                                  <div className="relative w-full  bg-white">
+                                  <div className="relative w-full mt-1  bg-white">
                                     <div className="mx-auto max-w-7xl px-8">
                                       <div className="grid grid-cols-2  gap-x-8 gap-y-10 py-16">
                                         {
