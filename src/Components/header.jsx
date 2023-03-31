@@ -283,7 +283,7 @@ export default function Example() {
                                   leaveFrom="opacity-100"
                                   leaveTo="opacity-0"
                                 >
-                                  <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
+                                  <Popover.Panel className="absolute inset-x-0 top-full ml-36 text-sm text-gray-500">
                                     <div
                                       className="absolute inset-0 top-1/2  shadow"
                                       aria-hidden="true"
@@ -1114,7 +1114,7 @@ export default function Example() {
                         {navigationn.categories.map((category) => (
                           <Tab.Panel
                             key={category.name}
-                            className="space-y-10 px-4 pb-8 "
+                            className="space-y-10 px-4  pb-8 "
                           >
                             <div className="grid grid-cols-1 gap-x-4"></div>
                             {category.sections.map((section) => (
