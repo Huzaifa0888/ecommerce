@@ -259,7 +259,7 @@ export default function Example() {
                     <div className="flex space-x-4">
                       <div className="bg-white">
                         {/* Mobile menu */}
-                       
+
                         {navigationn.categories.map((category) => (
                           <Popover key={category.name} className="flex">
                             {({ open }) => (
@@ -268,10 +268,22 @@ export default function Example() {
                                   <Popover.Button
                                     className={classNames(
                                       open ? "text-black" : "text-black",
-                                      "rounded-md px-3 py-2 text-base font-extrabold"
+                                      "rounded-md px-3 py-2 flex text-base font-extrabold"
                                     )}
                                   >
                                     {category.name}
+                                    <svg
+                                      class=" mt-1 ml-1 mr-0 pr-0 h-4 w-4  text-black"
+                                      viewBox="0 0 20 20"
+                                      fill="currentColor"
+                                      aria-hidden="true"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                        clip-rule="evenodd"
+                                      />
+                                    </svg>
                                   </Popover.Button>
                                 </div>
 
@@ -337,7 +349,6 @@ export default function Example() {
                             )}
                           </Popover>
                         ))}
-                     
                       </div>
                       {navigation.categories.map((category) => (
                         <Popover key={category.name} className="flex">
@@ -347,10 +358,22 @@ export default function Example() {
                                 <Popover.Button
                                   className={classNames(
                                     open ? "text-black" : "text-black",
-                                    "rounded-md px-3 py-2 text-base font-extrabold"
+                                    "rounded-md px-3 py-2 text-base flex font-extrabold"
                                   )}
                                 >
                                   {category.name}
+                                  <svg
+                                    class=" mt-1 ml-1 mr-0 pr-0 h-4 w-4  text-black"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
                                 </Popover.Button>
                               </div>
 
@@ -455,10 +478,22 @@ export default function Example() {
                           <Menu.Button
                             className={classNames(
                               false ? "bg-gray-900 text-white" : "text-black",
-                              "rounded-md px-3 py-2 text-base font-extrabold"
+                              "rounded-md px-3 py-2 text-base flex font-extrabold"
                             )}
                           >
                             BLOG
+                            <svg
+                              class=" mt-1 ml-1 mr-0 pr-0 h-4 w-4  text-black"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
                           </Menu.Button>
                         </div>
 
@@ -596,10 +631,22 @@ export default function Example() {
                           <Menu.Button
                             className={classNames(
                               false ? "bg-gray-900 text-white" : "text-black",
-                              "rounded-md px-3 py-2 text-base font-extrabold"
+                              "rounded-md px-3 py-2 text-base flex font-extrabold"
                             )}
                           >
                             PAGE
+                            <svg
+                              class=" mt-1 ml-1 mr-0 pr-0 h-4 w-4  text-black"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
                           </Menu.Button>
                         </div>
 
