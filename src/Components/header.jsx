@@ -814,7 +814,7 @@ export default function Example() {
                   <button
                     onClick={handleOpenDialog}
                     type="button"
-                    className=" p-1 text-gray-400 pl-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className=" p-1 text-gray-400 pl-2 hidden md:block lg:block focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <svg
                       className="h-7 w-7"
