@@ -4,6 +4,8 @@ import {
   ShoppingBagIcon,
   
 } from "@heroicons/react/24/outline";
+import { BiMinus } from "react-icons/bi";
+import { BsPlusLg } from "react-icons/bs";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Fragment, useState } from "react";
 import { Dialog, Popover,Tab, Transition } from "@headlessui/react";
@@ -228,7 +230,7 @@ export default function Example() {
               <div className="relative flex h-16 items-center justify-between ">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white  ">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -496,7 +498,7 @@ export default function Example() {
                           leaveFrom="transform opacity-100 scale-100"
                           leaveTo="transform opacity-0 scale-95"
                         >
-                          <Menu.Items className="absolute right-0 left-0  z-10 mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <Menu.Items className="absolute right-0 left-0  z-10 mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg   ">
                             <div className="py-1">
                               <Menu.Item>
                                 {({ active }) => (
@@ -649,7 +651,7 @@ export default function Example() {
                           leaveFrom="transform opacity-100 scale-100"
                           leaveTo="transform opacity-0 scale-95"
                         >
-                          <Menu.Items className="absolute right-0 left-0  z-10 mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <Menu.Items className="absolute right-0 left-0  z-10 mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ">
                             <div className="py-1">
                               <Menu.Item>
                                 {({ active }) => (
@@ -740,7 +742,7 @@ export default function Example() {
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                   <button
                     type="button"
-                    className=" p-1 text-gray-400 px-2px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className=" p-1 text-gray-400 px-2px-2  "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -757,10 +759,7 @@ export default function Example() {
                       />
                     </svg>
                   </button>
-                  <button
-                    type="button"
-                    className=" p-1 text-gray-400 px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
+                  <button type="button" className=" p-1 text-gray-400 px-2  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -776,10 +775,7 @@ export default function Example() {
                       />
                     </svg>
                   </button>
-                  <button
-                    type="button"
-                    className=" p-1 text-gray-400 px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
+                  <button type="button" className=" p-1 text-gray-400 px-2  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -795,10 +791,7 @@ export default function Example() {
                       />
                     </svg>
                   </button>
-                  <button
-                    type="button"
-                    className=" p-1 text-gray-400 pl-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
+                  <button type="button" className=" p-1 text-gray-400 pl-2 ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -817,7 +810,7 @@ export default function Example() {
                   <button
                     onClick={handleOpenDialog}
                     type="button"
-                    className=" text-gray-400 pl-2 hidden md:block lg:block focus:outline-none   focus:ring-offset-2 "
+                    className=" text-gray-400 pl-2 hidden md:block lg:block    "
                   >
                     <svg
                       className="w-8 h-8 m-0 p-0x"
@@ -1085,7 +1078,7 @@ export default function Example() {
                   className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
                   onClick={handleMobileDialog}
                 >
-                  <div className="space-y-1 px-2 pt-2 pb-3">
+                  {/* <div className="space-y-1 px-2 pt-2 pb-3">
                     <Tab.Group as="div" className="mt-2">
                       <div className="border-b border-gray-200">
                         <Tab.List className="-mb-px flex space-x-8 px-4">
@@ -1191,6 +1184,62 @@ export default function Example() {
                         ))}
                       </Tab.Panels>
                     </Tab.Group>
+                  </div> */}
+                  <div className="w-full h-fit px-4 pt-16 ">
+                    <div className="mx-auto w-[500px]  max-w-md rounded-2xl bg-white p-2 text-lg">
+                      {navigationn.categories.map((category) => (
+                        <Disclosure>
+                          {({ open }) => (
+                            <>
+                              <div key={category.name}>
+                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                                  <span>{category.name}</span>
+                                  {open ? <BiMinus /> : <BsPlusLg />}
+                                </Disclosure.Button>
+                                <Disclosure.Panel className="text-gray-500  w-full  rounded-lg px-4 mb-2 text-left text-sm font-medium">
+                                  {category.sections.map((section) => (
+                                    <div key={section.name}>
+                                      <p
+                                        id={`${category.id}-${section.id}-heading-mobile`}
+                                        className="font-bold text-gray-900 text-lg py-1"
+                                      >
+                                        {section.name}
+                                      </p>
+                                    </div>
+                                  ))}
+                                </Disclosure.Panel>
+                              </div>
+                            </>
+                          )}
+                        </Disclosure>
+                      ))}
+                      {navigation.categories.map((category) => (
+                        <Disclosure>
+                          {({ open }) => (
+                            <>
+                              <div key={category.name}>
+                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                                  <span>{category.name}</span>
+                                  {open ? <BiMinus /> : <BsPlusLg />}
+                                </Disclosure.Button>
+                                <Disclosure.Panel className="text-gray-500  w-full  rounded-lg px-4 mb-2 text-left text-sm font-medium">
+                                  {category.sections.map((section) => (
+                                    <div key={section.name}>
+                                      <p
+                                        id={`${category.id}-${section.id}-heading-mobile`}
+                                        className="font-bold text-gray-900 text-lg py-1"
+                                      >
+                                        {section.name}
+                                      </p>
+                                    </div>
+                                  ))}
+                                </Disclosure.Panel>
+                              </div>
+                            </>
+                          )}
+                        </Disclosure>
+                      ))}
+                    </div>
                   </div>
                   <span className="sr-only">Close menu</span>
                 </button>

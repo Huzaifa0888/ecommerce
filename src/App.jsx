@@ -19,7 +19,7 @@ function App() {
     <>
       <section className="bg-gray-100 font-sans">
 
-    {/* <C></C> */}
+    <C></C>
         <Header></Header>
         <Herosection></Herosection>
         <FirstCarausel></FirstCarausel>
