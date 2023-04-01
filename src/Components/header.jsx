@@ -1239,6 +1239,62 @@ export default function Example() {
                           )}
                         </Disclosure>
                       ))}
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <div>
+                              <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                                <span>BLOG</span>
+                                {open ? <BiMinus /> : <BsPlusLg />}
+                              </Disclosure.Button>
+                              <Disclosure.Panel className="text-gray-500  w-full  rounded-lg px-4 mb-2 text-left text-sm font-medium">
+                                <div>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                </div>
+                              </Disclosure.Panel>
+                            </div>
+                          </>
+                        )}
+                      </Disclosure>
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <div>
+                              <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                                <span>PAGES</span>
+                                {open ? <BiMinus /> : <BsPlusLg />}
+                              </Disclosure.Button>
+                              <Disclosure.Panel className="text-gray-500  w-full  rounded-lg px-4 mb-2 text-left text-sm font-medium">
+                                <div>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                  <p className="font-bold text-gray-900 text-lg py-1">
+                                    Edit
+                                  </p>
+                                </div>
+                              </Disclosure.Panel>
+                            </div>
+                          </>
+                        )}
+                      </Disclosure>
                     </div>
                   </div>
                   <span className="sr-only">Close menu</span>
