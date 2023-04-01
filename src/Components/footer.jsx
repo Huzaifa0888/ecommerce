@@ -50,7 +50,7 @@ function footer() {
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 lg:px-4 ml-auto pb-3">
-                  <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-blueGray-500 text-sm font-extrabold mb-2 mt-2">
                     Useful Links
                   </span>
                   <ul className="list-unstyled">
@@ -89,7 +89,7 @@ function footer() {
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 lg:px-4 ml-auto pb-3">
-                  <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-blueGray-500 text-sm font-extrabold mb-2 mt-2">
                     Useful Links
                   </span>
                   <ul className="list-unstyled">
@@ -128,7 +128,7 @@ function footer() {
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 lg:px-4">
-                  <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-blueGray-500 text-sm font-extrabold mb-2 mt-2">
                     Other Resources
                   </span>
                   <ul className="list-unstyled">

@@ -218,10 +218,13 @@ export default function Example() {
     };
   return (
     <>
-      <Disclosure as="nav" className="bg-white   ">
+      <Disclosure
+        as="nav"
+        className="bg-gray-100 lg:pl-2 lg:p-3 min-h-[75px]   mx-auto"
+      >
         {({ open }) => (
           <>
-            <div className="  px-2 sm:px-6  lg:w-full md:w-11/12    ">
+            <div className="  px-2 sm:px-6 lg:pr-0 lg:pl-2   lg:w-full md:w-11/12   mx-auto ">
               <div className="relative flex h-16 items-center justify-between ">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
@@ -237,14 +240,14 @@ export default function Example() {
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <img
-                      className="hidden h-8 w-auto lg:block"
+                      className="hidden h-7 w-auto lg:block "
                       src="/logo (2).png"
                       alt="Your Company"
                     />
                   </div>
-                  <div className="hidden sm:ml-6 sm:block">
+                  <div className="hidden sm:ml-6  sm:block">
                     <div className="flex space-x-4">
-                      <div className="bg-white">
+                      <div className="">
                         {/* Mobile menu */}
 
                         {navigationn.categories.map((category) => (
@@ -255,7 +258,7 @@ export default function Example() {
                                   <Popover.Button
                                     className={classNames(
                                       open ? "text-black" : "text-black",
-                                      "rounded-md px-3 py-2 flex text-sm font-extrabold"
+                                      "rounded-md pl-3 py-2 flex text-sm font-extrabold"
                                     )}
                                   >
                                     {category.name}
@@ -345,7 +348,7 @@ export default function Example() {
                                 <Popover.Button
                                   className={classNames(
                                     open ? "text-black" : "text-black",
-                                    "rounded-md px-3 py-2 text-sm flex font-extrabold"
+                                    "rounded-md  py-2 text-sm flex font-extrabold"
                                   )}
                                 >
                                   {category.name}
@@ -465,7 +468,7 @@ export default function Example() {
                           <Menu.Button
                             className={classNames(
                               false ? "bg-gray-900 text-white" : "text-black",
-                              "rounded-md px-3 py-2 text-sm flex font-extrabold"
+                              "rounded-md  py-2 text-sm flex font-extrabold"
                             )}
                           >
                             BLOG
@@ -618,7 +621,7 @@ export default function Example() {
                           <Menu.Button
                             className={classNames(
                               false ? "bg-gray-900 text-white" : "text-black",
-                              "rounded-md px-3 py-2 text-sm flex font-extrabold"
+                              "rounded-md  py-2 text-sm flex font-extrabold"
                             )}
                           >
                             PAGE
@@ -745,7 +748,7 @@ export default function Example() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-6 h-6"
+                      className="w-7 h-7 mr-2"
                     >
                       <path
                         strokeLinecap="round"
@@ -764,7 +767,7 @@ export default function Example() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-6 h-6"
+                      className="w-7 h-7 mr-2"
                     >
                       <path
                         strokeLinecap="round"
@@ -783,7 +786,7 @@ export default function Example() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-6 h-6"
+                      className="w-7 h-7 mr-2"
                     >
                       <path
                         strokeLinecap="round"
@@ -802,7 +805,7 @@ export default function Example() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-6 h-6"
+                      className="w-7 h-7 mr-2"
                     >
                       <path
                         strokeLinecap="round"
@@ -814,10 +817,10 @@ export default function Example() {
                   <button
                     onClick={handleOpenDialog}
                     type="button"
-                    className=" p-1 text-gray-400 pl-2 hidden md:block lg:block focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className=" text-gray-400 pl-2 hidden md:block lg:block focus:outline-none   focus:ring-offset-2 "
                   >
                     <svg
-                      className="h-7 w-7"
+                      className="w-8 h-8 m-0 p-0x"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -1076,7 +1079,7 @@ export default function Example() {
               </nav>
             </header> */}
             <Disclosure.Panel className="sm:hidden">
-              <div className="flex px-4 pb-2 pt-5">
+              <div className="flex px-4 justify-center pb-2 pt-5">
                 <button
                   type="button"
                   className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
@@ -1148,35 +1151,14 @@ export default function Example() {
                         {navigation.categories.map((category) => (
                           <Tab.Panel
                             key={category.name}
-                            className="space-y-10 px-4 pb-8 pt-10"
+                            className="space-y-10 px-4 pb-8 "
                           >
                             <div className="grid grid-cols-1 gap-x-4">
                               {category.featured.map((item) => (
                                 <div
                                   key={item.name}
                                   className="group relative text-sm"
-                                >
-                                  <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                    <img
-                                      src={item.imageSrc}
-                                      alt={item.imageAlt}
-                                      className="object-cover object-center"
-                                    />
-                                  </div>
-                                  <a
-                                    href={item.href}
-                                    className="mt-6 block font-bold text-gray-900"
-                                  >
-                                    <span
-                                      className="absolute inset-0 z-10"
-                                      aria-hidden="true"
-                                    />
-                                    {item.name}
-                                  </a>
-                                  <p aria-hidden="true" className="mt-1">
-                                    Shop now
-                                  </p>
-                                </div>
+                                ></div>
                               ))}
                             </div>
                             {category.sections.map((section) => (
