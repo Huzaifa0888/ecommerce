@@ -17,9 +17,8 @@ import C from "./Components/c";
 function App() {
   return (
     <>
-      <section className="bg-gray-100 font-sans">
-
-    {/* <C></C> */}
+      <section className="bg-gray-100 font-sans ">
+        {/* <C></C> */}
         <Header></Header>
         <Herosection></Herosection>
         <FirstCarausel></FirstCarausel>
@@ -30,9 +29,8 @@ function App() {
         <Signup></Signup>
         <Footer></Footer>
       </section>
-        {/* <Car></Car> */}
+      {/* <Car></Car> */}
     </>
-
   );
 }
 

@@ -46,7 +46,7 @@ export default function Example() {
   return (
     <div className="bg-white max-w-7xl lg:w-[92%] mx-auto md:w-11/12">
       <div className="mx-auto max-w-2xl lg:py-16 md:py-16 py-0 px-4 sm:py-0 sm:px-6 lg:max-w-full lg:px-4  lg:w-[96.5%] md:w-11/12  bg-white">
-        <h2 className="text-5xl text-center font-bold tracking-tight text-gray-900 pb-10">
+        <h2 className="text-[35px] text-center font-bold tracking-tight text-gray-900 pb-10">
           Hot Deals
         </h2>
 
@@ -58,13 +58,13 @@ export default function Example() {
             </h1>
             <div className="flex pb-1">
               <p className="font-extrabold">
-                8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+                23 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
               </p>
               <p className="font-extrabold">
-                &nbsp;&nbsp;8
+                &nbsp;&nbsp;11
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
               </p>
-              <p className="font-extrabold">&nbsp;&nbsp;8</p>
+              <p className="font-extrabold">&nbsp;&nbsp;59</p>
             </div>
             <div className="flex justify-between">
               <p className="font-medium">DAYS</p>
@@ -72,7 +72,7 @@ export default function Example() {
               <p className="font-medium pr-5">MINS</p>
             </div>
             <div>
-              <p className="font-extrabold pt-2">8</p>
+              <p className="font-extrabold pt-2">59</p>
               <p className="font-medium pr-5">SEC</p>
             </div>
             {/* <div className="flex justify-center">
@@ -119,25 +119,27 @@ export default function Example() {
                     {product.price}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  className="  text-gray-400 p-0 m-0 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6 "
+                <div>
+                  <button
+                    type="button"
+                    className="  text-gray-400 p-0 m-0  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           ))}

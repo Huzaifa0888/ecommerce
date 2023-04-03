@@ -15,11 +15,11 @@ function herosection() {
                   NEW ARRIVALS <br class="block sm:hidden" />
                 </span>
               </div>
-              <h6 class="text-3xl font-semibold leading-tight text-black sm:text-4xl lg:text-5xl">
+              <h6 class="text-3xl font-normal leading-tight text-black sm:text-4xl  lg:text-[70px]">
                 Night Spring <br class="block sm:hidden" />
               </h6>
 
-              <h1 class="text-3xl font-black leading-tight text-black sm:text-4xl lg:text-7xl">
+              <h1 class="text-3xl font-extrabold leading-tight text-black sm:text-4xl mt-10 lg:text-[70px]  ">
                 Blazers <br class="block sm:hidden" />
               </h1>
             </div>
