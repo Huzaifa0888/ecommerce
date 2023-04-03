@@ -1071,11 +1071,11 @@ export default function Example() {
                 </div>
               </nav>
             </header> */}
-            <Disclosure.Panel className="sm:hidden">
+            <Disclosure.Panel className="sm:hidden max-w-640 mx-auto ">
               <div className="flex px-4 justify-center pb-2 pt-5">
                 <button
                   type="button"
-                  className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+                  className="-m-2 inline-flex items-center justify-center  text-gray-400"
                   onClick={handleMobileDialog}
                 >
                   {/* <div className="space-y-1 px-2 pt-2 pb-3">
@@ -1185,8 +1185,8 @@ export default function Example() {
                       </Tab.Panels>
                     </Tab.Group>
                   </div> */}
-                  <div className="w-full h-fit px-4 pt-16 ">
-                    <div className="mx-auto w-[500px]  max-w-md rounded-2xl bg-white p-2 text-lg">
+                  <div className="w-full h-fit px-4  ">
+                    <div className="mx-auto w-screen  max-w-md  bg-white p-2 text-lg">
                       {navigationn.categories.map((category) => (
                         <Disclosure>
                           {({ open }) => (

@@ -17,7 +17,7 @@ import C from "./Components/c";
 function App() {
   return (
     <>
-      <section className="bg-gray-100 font-sans ">
+      <section className="bg-gray-100 font-sans overflow-x-hidden">
         {/* <C></C> */}
         <Header></Header>
         <Herosection></Herosection>

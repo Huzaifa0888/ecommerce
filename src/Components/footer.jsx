@@ -211,9 +211,9 @@ function footer() {
       />
 
       <footer className="relative bg-blueGray-200 pt-8 pb-6  lg:w-[92%] md:w-11/12  mx-auto bg-white max-w-7xl ">
-        <div className="container mx-auto px-4 ">
+        <div className=" ">
           <div className="flex flex-wrap text-left lg:text-left">
-            <div className="w-full lg:w-6/12 px-4 ">
+            <div className="w-full md:w-full lg:w-6/12 px-4 ">
               <img src="/logo (2).png" alt="" />
               <h4 className="text-3xl fonat-semibold text-blueGray-700 pt-3">
                 Let's keep in touch!
@@ -369,11 +369,9 @@ function footer() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="flex px-2 justify-center pb-2 ">
-            <div className="w-full h-fit   block md:hidden lg:hidden">
-              <div className="mx-auto w-[500px]  max-w-md rounded-2xl bg-white p-2 text-lg">
+          <div className=" ">
+            <div className=" h-fit w-full  block md:hidden lg:hidden">
+              <div className="mx-auto w-screen  max-w-md rounded-2xl bg-white p-2 text-lg">
                 <Disclosure>
                   {({ open }) => (
                     <>
@@ -522,6 +520,8 @@ function footer() {
             </div>
             <span className="sr-only">Close menu</span>
           </div>
+          </div>
+
           <hr className="my-6 border-blueGray-300" />
           <div className="flex flex-wrap items-center md:justify-between  justify-center lg:justify-between">
             <div className="w-full   lg:px-4  flex flex-wrap items-center md:justify-between justify-center lg:justify-between  ">
