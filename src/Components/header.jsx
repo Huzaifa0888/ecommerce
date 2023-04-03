@@ -1201,7 +1201,7 @@ export default function Example() {
                                     <div key={section.name}>
                                       <p
                                         id={`${category.id}-${section.id}-heading-mobile`}
-                                        className="font-bold text-gray-900 text-lg py-1"
+                                        className="font-bold text-gray-900 text-lg py-1 pl-2"
                                       >
                                         {section.name}
                                       </p>
@@ -1227,7 +1227,7 @@ export default function Example() {
                                     <div key={section.name}>
                                       <p
                                         id={`${category.id}-${section.id}-heading-mobile`}
-                                        className="font-bold text-gray-900 text-lg py-1"
+                                        className="font-bold text-gray-900 text-lg py-1 pl-2"
                                       >
                                         {section.name}
                                       </p>
@@ -1248,7 +1248,7 @@ export default function Example() {
                                 {open ? <BiMinus /> : <BsPlusLg />}
                               </Disclosure.Button>
                               <Disclosure.Panel className="text-gray-500  w-full  rounded-lg px-4 mb-2 text-left text-sm font-medium">
-                                <div>
+                                <div className="pl-2">
                                   <p className="font-bold text-gray-900 text-lg py-1">
                                     Edit
                                   </p>
@@ -1276,7 +1276,7 @@ export default function Example() {
                                 {open ? <BiMinus /> : <BsPlusLg />}
                               </Disclosure.Button>
                               <Disclosure.Panel className="text-gray-500  w-full  rounded-lg px-4 mb-2 text-left text-sm font-medium">
-                                <div>
+                                <div className="pl-2">
                                   <p className="font-bold text-gray-900 text-lg py-1">
                                     Edit
                                   </p>

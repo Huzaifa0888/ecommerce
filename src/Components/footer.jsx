@@ -369,157 +369,157 @@ function footer() {
                 </div>
               </div>
             </div>
-          <div className=" ">
-            <div className=" h-fit w-full  block md:hidden lg:hidden">
-              <div className="mx-auto w-screen  max-w-md rounded-2xl bg-white p-2 text-lg">
-                <Disclosure>
-                  {({ open }) => (
-                    <>
-                      <div>
-                        <Disclosure.Button className="flex w-full justify-between rounded-lg   py-3 mb-2 text-left font-bold text-black">
-                          <span>Useful Links</span>
-                          {open ? <BiMinus /> : <BsPlusLg />}
-                        </Disclosure.Button>
-                        <Disclosure.Panel className="text-gray-500  w-full  rounded-lg  mb-2 text-left text-sm font-medium">
-                          <ul className="list-unstyled">
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                              >
-                                MIT License
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/terms?ref=njs-profile"
-                              >
-                                Terms &amp; Conditions
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/privacy?ref=njs-profile"
-                              >
-                                Privacy Policy
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/contact-us?ref=njs-profile"
-                              >
-                                Contact Us
-                              </a>
-                            </li>
-                          </ul>
-                        </Disclosure.Panel>
-                      </div>
-                    </>
-                  )}
-                </Disclosure>
-                <Disclosure>
-                  {({ open }) => (
-                    <>
-                      <div>
-                        <Disclosure.Button className="flex w-full justify-between rounded-lg   py-3 mb-2 text-left font-bold text-black">
-                          <span>Useful Links</span>
-                          {open ? <BiMinus /> : <BsPlusLg />}
-                        </Disclosure.Button>
-                        <Disclosure.Panel className="text-gray-500  w-full  rounded-lg  mb-2 text-left text-sm font-medium">
-                          <ul className="list-unstyled">
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                              >
-                                MIT License
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/terms?ref=njs-profile"
-                              >
-                                Terms &amp; Conditions
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/privacy?ref=njs-profile"
-                              >
-                                Privacy Policy
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/contact-us?ref=njs-profile"
-                              >
-                                Contact Us
-                              </a>
-                            </li>
-                          </ul>
-                        </Disclosure.Panel>
-                      </div>
-                    </>
-                  )}
-                </Disclosure>
-                <Disclosure>
-                  {({ open }) => (
-                    <>
-                      <div>
-                        <Disclosure.Button className="flex w-full justify-between rounded-lg   py-3 mb-2 text-left font-bold text-black">
-                          <span>Useful Links</span>
-                          {open ? <BiMinus /> : <BsPlusLg />}
-                        </Disclosure.Button>
-                        <Disclosure.Panel className="text-gray-500  w-full  rounded-lg  mb-2 text-left text-sm font-medium">
-                          <ul className="list-unstyled">
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                              >
-                                MIT License
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/terms?ref=njs-profile"
-                              >
-                                Terms &amp; Conditions
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/privacy?ref=njs-profile"
-                              >
-                                Privacy Policy
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
-                                href="https://creative-tim.com/contact-us?ref=njs-profile"
-                              >
-                                Contact Us
-                              </a>
-                            </li>
-                          </ul>
-                        </Disclosure.Panel>
-                      </div>
-                    </>
-                  )}
-                </Disclosure>
+            <div className=" ">
+              <div className=" h-fit w-full  block md:hidden lg:hidden">
+                <div className="mx-auto w-screen  max-w-md rounded-2xl bg-white p-2 text-lg">
+                  <Disclosure>
+                    {({ open }) => (
+                      <>
+                        <div>
+                          <Disclosure.Button className="flex w-full justify-between rounded-lg   py-3 mb-2 text-left font-bold text-black">
+                            <span>Useful Links</span>
+                            {open ? <BiMinus /> : <BsPlusLg />}
+                          </Disclosure.Button>
+                          <Disclosure.Panel className="text-gray-500  w-full  rounded-lg  mb-2 text-left text-sm font-medium">
+                            <ul className="list-unstyled pl-2">
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                                >
+                                  MIT License
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/terms?ref=njs-profile"
+                                >
+                                  Terms &amp; Conditions
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/privacy?ref=njs-profile"
+                                >
+                                  Privacy Policy
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/contact-us?ref=njs-profile"
+                                >
+                                  Contact Us
+                                </a>
+                              </li>
+                            </ul>
+                          </Disclosure.Panel>
+                        </div>
+                      </>
+                    )}
+                  </Disclosure>
+                  <Disclosure>
+                    {({ open }) => (
+                      <>
+                        <div>
+                          <Disclosure.Button className="flex w-full justify-between rounded-lg   py-3 mb-2 text-left font-bold text-black">
+                            <span>Useful Links</span>
+                            {open ? <BiMinus /> : <BsPlusLg />}
+                          </Disclosure.Button>
+                          <Disclosure.Panel className="text-gray-500  w-full  rounded-lg  mb-2 text-left text-sm font-medium">
+                            <ul className="list-unstyled pl-2">
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                                >
+                                  MIT License
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/terms?ref=njs-profile"
+                                >
+                                  Terms &amp; Conditions
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/privacy?ref=njs-profile"
+                                >
+                                  Privacy Policy
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/contact-us?ref=njs-profile"
+                                >
+                                  Contact Us
+                                </a>
+                              </li>
+                            </ul>
+                          </Disclosure.Panel>
+                        </div>
+                      </>
+                    )}
+                  </Disclosure>
+                  <Disclosure>
+                    {({ open }) => (
+                      <>
+                        <div>
+                          <Disclosure.Button className="flex w-full justify-between rounded-lg   py-3 mb-2 text-left font-bold text-black">
+                            <span>Useful Links</span>
+                            {open ? <BiMinus /> : <BsPlusLg />}
+                          </Disclosure.Button>
+                          <Disclosure.Panel className="text-gray-500  w-full  rounded-lg  mb-2 text-left text-sm font-medium">
+                            <ul className="list-unstyled pl-2">
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                                >
+                                  MIT License
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/terms?ref=njs-profile"
+                                >
+                                  Terms &amp; Conditions
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/privacy?ref=njs-profile"
+                                >
+                                  Privacy Policy
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-3 text-sm"
+                                  href="https://creative-tim.com/contact-us?ref=njs-profile"
+                                >
+                                  Contact Us
+                                </a>
+                              </li>
+                            </ul>
+                          </Disclosure.Panel>
+                        </div>
+                      </>
+                    )}
+                  </Disclosure>
+                </div>
               </div>
+              <span className="sr-only">Close menu</span>
             </div>
-            <span className="sr-only">Close menu</span>
-          </div>
           </div>
 
           <hr className="my-6 border-blueGray-300" />
