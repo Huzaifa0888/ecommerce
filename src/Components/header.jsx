@@ -1192,7 +1192,7 @@ export default function Example() {
                           {({ open }) => (
                             <>
                               <div key={category.name}>
-                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-0 pb-2 text-left font-medium text-black ">
                                   <span>{category.name}</span>
                                   {open ? <BiMinus /> : <BsPlusLg />}
                                 </Disclosure.Button>
@@ -1218,7 +1218,7 @@ export default function Example() {
                           {({ open }) => (
                             <>
                               <div key={category.name}>
-                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-0 pb-2 text-left font-medium text-black ">
                                   <span>{category.name}</span>
                                   {open ? <BiMinus /> : <BsPlusLg />}
                                 </Disclosure.Button>
@@ -1243,7 +1243,7 @@ export default function Example() {
                         {({ open }) => (
                           <>
                             <div>
-                              <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                              <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-0 pb-2 text-left font-medium text-black ">
                                 <span>BLOG</span>
                                 {open ? <BiMinus /> : <BsPlusLg />}
                               </Disclosure.Button>
@@ -1271,7 +1271,7 @@ export default function Example() {
                         {({ open }) => (
                           <>
                             <div>
-                              <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-2 text-left font-medium text-black">
+                              <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-3 mb-0 pb-2 text-left font-medium text-black ">
                                 <span>PAGES</span>
                                 {open ? <BiMinus /> : <BsPlusLg />}
                               </Disclosure.Button>
